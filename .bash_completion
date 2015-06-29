@@ -1,0 +1,6 @@
+_ssh()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W "$(cat ~/.ssh/config | grep "Host " | awk '{print $2}' | tr '\n' ' ')" -- $cur) )
+}
+complete -F _ssh ssh
