@@ -3,10 +3,10 @@ files=".bash_aliases .bash_completion .bashrc .git-prompt.sh"
 
 for file in $files
 do
-	eval file="~/$file"
-	if [ -e $file ]; then
-		mv "$file" "$file.bkp"
+	eval homeFile="~/$file"
+	if [ -e $homeFile ]; then
+		mv "$homeFile" "$homeFile.bkp"
 	fi
 
-	wget "https://raw.githubusercontent.com/bobey/dot-files/master/$file"
+	wget "https://raw.githubusercontent.com/bobey/dot-files/master/$file" -O $homeFile -q
 done
