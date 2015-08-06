@@ -1,5 +1,5 @@
 #!/bin/bash
-files=".bash_aliases .bash_completion .bashrc .git-prompt.sh"
+files=".bash_aliases .bash_completion .bashrc .git-prompt.sh .screenrc"
 
 for file in $files
 do
