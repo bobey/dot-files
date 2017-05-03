@@ -8,5 +8,5 @@ do
 		mv "$homeFile" "$homeFile.bkp"
 	fi
 
-	wget "https://raw.githubusercontent.com/bobey/dot-files/master/$file" -O $homeFile -q
+	wget --no-check-certificate "https://raw.githubusercontent.com/bobey/dot-files/master/$file" -O $homeFile -q
 done
